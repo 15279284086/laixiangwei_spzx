@@ -1,0 +1,14 @@
+# Java
+*.class
+*.jar
+*.war
+target/
+build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
