@@ -24,7 +24,7 @@ pipeline {
             steps {
 
                 sh '''
-                scp spzx-app/target/*.jar \
+                scp spzx-manager/target/spzx-app.jar \
                 lxw@192.168.60.129:/opt/apps/spzx/spzx-app.jar
                 '''
 
