@@ -1,11 +1,15 @@
 package com.lxw.spzx;
 
+import com.lxw.spzx.common.log.annotation.EnableLogAspect;
 import com.lxw.spzx.manager.properties.MinioProperties;
 import com.lxw.spzx.manager.properties.UserAuthProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
+@EnableLogAspect
+@EnableScheduling
 @SpringBootApplication
 @EnableConfigurationProperties(value = {UserAuthProperties.class, MinioProperties.class})
 public class ManagerApplication {

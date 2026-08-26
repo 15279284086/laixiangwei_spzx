@@ -1,6 +1,7 @@
 package com.lxw.spzx.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.lxw.spzx.common.log.annotation.Log;
 import com.lxw.spzx.manager.service.SysRoleService;
 import com.lxw.spzx.model.dto.system.SysRoleDto;
 import com.lxw.spzx.model.entity.system.SysRole;
@@ -27,6 +28,7 @@ public class SysRoleController {
         return Result.build(pageInfo , ResultCodeEnum.SUCCESS) ;
     }
 
+    @Log(title = "角色添加",businessType = 0) //添加Log注解，设置属性
     @PostMapping(value = "/saveSysRole")
     public Result saveSysRole(@RequestBody SysRole  sysRole) {
 
