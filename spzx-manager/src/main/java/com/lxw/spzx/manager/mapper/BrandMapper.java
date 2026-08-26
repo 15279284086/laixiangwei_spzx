@@ -9,5 +9,6 @@ import java.util.List;
 public interface BrandMapper {
 
     public abstract List<Brand> findByPage();
+    public abstract List<Brand> findAll();
 
 }

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value="/admin/product/brand")
 public class BrandController {
@@ -22,6 +24,11 @@ public class BrandController {
     public Result<PageInfo<Brand>> findByPage(@PathVariable Integer page, @PathVariable Integer limit) {
         PageInfo<Brand> pageInfo = brandService.findByPage(page, limit);
         return Result.build(pageInfo , ResultCodeEnum.SUCCESS) ;
+    }
+    @GetMapping("/findAll")
+    public Result findAll() {
+        List<Brand> list = brandService.findAll();
+        return Result.build(list , ResultCodeEnum.SUCCESS) ;
     }
 
 }

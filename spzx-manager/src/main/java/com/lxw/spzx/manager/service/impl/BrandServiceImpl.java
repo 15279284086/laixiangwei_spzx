@@ -22,4 +22,8 @@ public class BrandServiceImpl implements BrandService {
         List<Brand> brandList = brandMapper.findByPage() ;
         return new PageInfo(brandList);
     }
+    @Override
+    public List<Brand> findAll() {
+        return brandMapper.findAll();
+    }
 }
